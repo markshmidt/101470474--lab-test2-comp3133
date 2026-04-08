@@ -1,59 +1,70 @@
-# 101470474LabTest2Comp3133
+# Harry Potter Characters (Angular)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.3.
+Angular app that fetches Harry Potter character data from the public HP API and displays it in a Material UI grid with filtering and a details page.
 
-## Development server
+## App description
 
-To start a local development server, run:
+This project is a COMP3133 lab test application built with Angular (standalone components + Angular Material). It retrieves character data from the HP API and renders:
+- A **character list** (cards with image, name, house)
+- A **house filter**
+- A **character details** view (image on the left, info on the right)
+
+**API used**: `https://hp-api.onrender.com/api`
+
+## Features implemented
+
+- **Fetch and display all characters** in a responsive card grid
+- **Filter characters by House** (Gryffindor, Slytherin, Ravenclaw, Hufflepuff, No House, All)
+- **Character details page** with:
+  - Left image + right information layout
+  - Wand info section
+  - Back to list button
+- **Loading spinner + error messages** for list/details fetches
+
+## Screenshots
+
+
+- **Character List**: shows all characters as cards + House filter dropdown  
+ <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/4b4a0987-7e3f-4c76-b378-1cd5d1bb314b" />
+
+
+- **Filtered by House**: list filtered to one house (e.g., Raveclaw)  
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/d3e4a58e-4ded-4b94-bb20-a0866cb33151" />
+
+
+- **Character Details**: bigger centered card with photo on the left and details on the right  
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/541414de-af63-48dc-a317-8ee339bc0b56" />
+
+
+## Instructions to run the project
+
+### Prerequisites
+
+- **Node.js**: Angular 21 requires **Node 20.19+** (or Node 22.12+).
+- **npm**: comes with Node
+
+### Install dependencies
+
+```bash
+npm install
+```
+### Run (development)
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open:
+- `http://localhost:4200/`
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Build
 
 ```bash
-ng generate --help
+npm run build
 ```
 
-## Building
-
-To build the project run:
+### Unit tests
 
 ```bash
-ng build
+npm test
 ```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
