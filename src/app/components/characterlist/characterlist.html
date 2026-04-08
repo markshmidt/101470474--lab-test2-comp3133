@@ -1,0 +1,33 @@
+<app-characterfilter (houseSelected)="onHouseSelected($event)"></app-characterfilter>
+
+<div *ngIf="loading" class="center">
+  <mat-spinner></mat-spinner>
+</div>
+
+<p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+
+<div *ngIf="!loading && !errorMessage" class="card-container">
+  <mat-card class="character-card" *ngFor="let character of characters">
+    <img
+      mat-card-image
+      [src]="character.image ? character.image : 'assets/no-image.png'"
+      [alt]="character.name"
+    />
+
+    <mat-card-content>
+      <h3>{{ character.name }}</h3>
+      <p [style.color]="getHouseColor(character.house)">
+        {{ character.house || 'No House' }}
+      </p>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button
+        mat-raised-button
+        color="accent"
+        [routerLink]="['/character', character.id]">
+        View Details
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

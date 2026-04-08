@@ -1,0 +1,42 @@
+.back-btn {
+    margin-bottom: 20px;
+}
+
+.details-card {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #1e1e1e;
+    color: white;
+    border-radius: 12px;
+    position: relative;
+    z-index: 2;
+}
+
+.details-card img {
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.wand-box {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #555;
+    border-radius: 8px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.spinner-wrapper {
+    position: relative;
+    z-index: 1;
+}
