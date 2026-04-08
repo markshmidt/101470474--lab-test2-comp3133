@@ -12,29 +12,37 @@
   
   } @else if (character) {
   
-    <mat-card class="details-card">
-      <img
-        mat-card-image
-        [src]="character.image || 'https://via.placeholder.com/300x400?text=No+Image'"
-        [alt]="character.name"
-      />
-  
-      <mat-card-content>
-        <h2>{{ character.name }}</h2>
-        <p><strong>Species:</strong> {{ character.species }}</p>
-        <p><strong>House:</strong> {{ character.house || 'No House' }}</p>
-        <p><strong>Wizard:</strong> {{ character.wizard ? 'Yes' : 'No' }}</p>
-        <p><strong>Ancestry:</strong> {{ character.ancestry || 'Unknown' }}</p>
-        <p><strong>Actor:</strong> {{ character.actor || 'Unknown' }}</p>
-  
-        <div class="wand-box">
-          <h3>Wand</h3>
-          <p><strong>Wood:</strong> {{ character.wand?.wood || 'Unknown' }}</p>
-          <p><strong>Core:</strong> {{ character.wand?.core || 'Unknown' }}</p>
-          <p><strong>Length:</strong> {{ character.wand?.length || 'Unknown' }}</p>
+    <div class="details-container">
+      <mat-card class="details-card">
+        <div class="details-layout">
+          <div class="image-section">
+            <img
+              [src]="character.image || 'https://via.placeholder.com/300x400?text=No+Image'"
+              [alt]="character.name"
+            />
+          </div>
+      
+          <div class="info-section">
+            <h2>{{ character.name }}</h2>
+            <p class="house"><strong>House:</strong> {{ character.house || 'No House' }}</p>
+      
+            <div class="info-grid">
+              <p><strong>Species:</strong> {{ character.species }}</p>
+              <p><strong>Wizard:</strong> {{ character.wizard ? 'Yes' : 'No' }}</p>
+              <p><strong>Ancestry:</strong> {{ character.ancestry || 'Unknown' }}</p>
+              <p><strong>Actor:</strong> {{ character.actor || 'Unknown' }}</p>
+            </div>
+      
+            <div class="wand-box">
+              <h3>Wand</h3>
+              <p><strong>Wood:</strong> {{ character.wand?.wood || 'Unknown' }}</p>
+              <p><strong>Core:</strong> {{ character.wand?.core || 'Unknown' }}</p>
+              <p><strong>Length:</strong> {{ character.wand?.length || 'Unknown' }}</p>
+            </div>
+          </div>
         </div>
-      </mat-card-content>
-    </mat-card>
+      </mat-card>
+    </div>
   
   } @else {
   
